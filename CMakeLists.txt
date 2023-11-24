@@ -79,25 +79,11 @@ add_executable(example_basic_operations example/example_basic_operations.cpp)
 target_link_libraries(example_basic_operations ${CASADI_LIBRARIES})
 
 # #run test to see if ipopt and casadi work
-# add_executable(example_racecar example/example_racecar.cpp)
-# target_link_libraries(example_racecar ${CASADI_LIBRARIES} ipopt)
+add_executable(example_racecar example/example_racecar.cpp)
+target_link_libraries(example_racecar ${CASADI_LIBRARIES} ipopt)
 
-
-# # casadi function C code auto generation
-# add_executable(example_code_gen example/example_code_gen.cpp)
-# target_link_libraries(example_code_gen ${CASADI_LIBRARIES})
-
-# # a test file to use auto generated code library
-# # compile the test file
-# add_executable(example_use_code_gen example/example_use_code_gen.cpp)
-# target_link_libraries(example_use_code_gen ${CASADI_LIBRARIES})
-
-# # compile a nonlinear programming to a shared library
-# add_executable(example_nlp_code_gen example/example_nlp_code_gen.cpp)
-# target_link_libraries(example_nlp_code_gen ${CASADI_LIBRARIES})
-
-# # solve a NLP given a compiled shared library
-# add_executable(example_use_nlp_external example/example_use_nlp_external.cpp)
-# target_link_libraries(example_use_nlp_external ${CASADI_LIBRARIES})
+# solve a NLP given a compiled shared library
+add_executable(example_use_nlp_external example/example_use_nlp_external.cpp)
+target_link_libraries(example_use_nlp_external ${CASADI_LIBRARIES})
 
 ###############################################
